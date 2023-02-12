@@ -106,7 +106,7 @@ cg-board square.premove-dest:hover {
 }
 cg-board square.last-move {
 	will-change: transform;
-	background-color: rgba(155, 199, 0, 0.41);
+	background-color: rgba(255, 255, 0, 0.5);
 }
 cg-board square.selected {
 	background-color: rgba(20, 85, 30, 0.5);

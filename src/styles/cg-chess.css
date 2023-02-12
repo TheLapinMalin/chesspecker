@@ -59,7 +59,7 @@
 
 .next-chessground .highlight cg-board square.last-move {
 	will-change: transform;
-	background-color: rgba(246, 246, 130, 0.5);
+	background-color: rgba(255, 255, 0, 0.5);
 }
 
 .next-chessground .highlight .correct cg-board square.last-move {
