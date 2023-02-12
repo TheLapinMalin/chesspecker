@@ -42,11 +42,16 @@ const createFilter =
 	(themeArray: string[], minRating: number, maxRating: number) =>
 	(spread: number): mongoose.FilterQuery<any> =>
 		themeArray.includes('healthyMix')
-			? {Rating: {$gt: minRating - spread, $lt: maxRating + spread}}
-			: {
+			? {
 					$and: [
-						{Rating: {$gt: minRating - spread, $lt: maxRating + spread}},
-						{Themes: {$in: [...themeArray]}},
+					{Rating:  {$gt: minRating - spread, $lt: maxRating + spread}},
+					{RatingDeviation: {$lt: 100}},
+				],
+			}	: {
+					$and: [
+						{Rating:  {$gt: minRating - spread, $lt: maxRating + spread}},
+						{RatingDeviation: {$lt: 100}},
+						{Themes:  {$in: [...themeArray]}},
 					],
 			  };
 
