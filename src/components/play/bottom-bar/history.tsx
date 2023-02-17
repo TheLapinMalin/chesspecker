@@ -11,9 +11,11 @@ type HistoryProps = {
 
 const getClasses = (grade: number) => {
 	const base = 'h-3 w-5 cursor-pointer rounded-sm mb-1';
-	if (grade < 3) return `${base} bg-red-500`;
-	if (grade < 5) return `${base} bg-orange-500`;
-	if (grade < 7) return `${base} bg-green-500`;
+	if (grade < 2) return `${base} bg-red-500`;
+	if (grade < 3) return `${base} bg-orange-500`;
+	if (grade < 4) return `${base} bg-yellow-500`;
+	if (grade < 5) return `${base} bg-green-500`;
+	if (grade < 7) return `${base} bg-sky-500`;
 };
 
 const History = ({puzzles}: HistoryProps) => {

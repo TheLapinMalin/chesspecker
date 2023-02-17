@@ -30,9 +30,11 @@ const EditModal = dynamic(async () => import('@/components/view/edit-modal'));
 
 const getClasses = (grade: number) => {
 	const base = 'h-5 w-10 cursor-pointer rounded-sm mb-1';
-	if (grade < 3) return `${base} bg-red-500`;
-	if (grade < 5) return `${base} bg-orange-500`;
-	if (grade < 7) return `${base} bg-green-500`;
+	if (grade < 2) return `${base} bg-red-500`;
+	if (grade < 3) return `${base} bg-orange-500`;
+	if (grade < 4) return `${base} bg-yellow-500`;
+	if (grade < 5) return `${base} bg-green-500`;
+	if (grade < 7) return `${base} bg-sky-500`;
 };
 
 const getAverage = (array: number[]): number =>

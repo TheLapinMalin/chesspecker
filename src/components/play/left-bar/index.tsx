@@ -15,9 +15,11 @@ type Props = {
 };
 
 const getGradeColor = (grade: number) => {
-	if (grade < 3) return `text-red-500`;
-	if (grade < 5) return `text-orange-500`;
-	if (grade < 7) return `text-green-500`;
+	if (grade < 2) return `text-red-500`;
+	if (grade < 3) return `text-orange-500`;
+	if (grade < 4) return `text-yellow-500`;
+	if (grade < 5) return `text-green-500`;
+	if (grade < 7) return `text-sky-500`;
 };
 
 const LeftBar = ({stat}: Props) => {
